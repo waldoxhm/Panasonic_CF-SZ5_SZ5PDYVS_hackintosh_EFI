@@ -24,13 +24,13 @@ OSX Big sur 11.5.2
  - Trachpad(act as a PS/2 compatiable mouse, system geature buged, SMBUS loaded ,but VRMI can't recognize it,"SYN0502"in ACPI.)
 
 ### Things to do
- - Replace #YOUR UUID# and #YOUR MB SERIAL# and #YOUR SERIAL NUMBER# in config.plist with a generator,such as hacintosh tool.
- - [Optional but Recommanded] Unlock CFG-lock refer to https://dortania.github.io/OpenCore-Post-Install/misc/msr-lock.html#turning-off-cfg-lock-manually
-   In my case (BIOS Version SZ5_V300L15)CFG-lock address is 0xA0F, set it to 0x00.
-   Boot into modGRUBShell.efi.
-   setup_var_3 0xA0F 0x00 (use mine with your own risk.I didn't test it in other environment, you'd prefer to do the whole thing in the link above.)
-   check message in ControlMsrE2.efi, UNLOCKED means SUCCESS.
-   you can set "AppleCpuPmCfgLock","AppleXcpmCfgLock" to false in config.plist.
+ - Replace #YOUR UUID# and #YOUR MB SERIAL# and #YOUR SERIAL NUMBER# in config.plist with a generator,such as hacintosh tool.  
+ - [Optional but Recommanded] Unlock CFG-lock refer to https://dortania.github.io/OpenCore-Post-Install/misc/msr-lock.html#turning-off-cfg-lock-manually  
+   1. In my case (BIOS Version SZ5_V300L15)CFG-lock address is 0xA0F, set it to 0x00.  
+   2. Boot into modGRUBShell.efi.  
+   3. setup_var_3 0xA0F 0x00 (use mine with your own risk.I didn't test it in other environment, you'd prefer to do the whole thing in the link above.)  
+   4. check message in ControlMsrE2.efi, UNLOCKED means SUCCESS.  
+   5. you can set "AppleCpuPmCfgLock","AppleXcpmCfgLock" to false in config.plist.  
  - Download Heliport and install. https://github.com/OpenIntelWireless/HeliPort/releases
  
 ### Credits & Sources (in no particular order and maybe missing some)
@@ -76,12 +76,12 @@ OSX Big sur 11.5.2
  
  ### 完善
  - 替换config.plist里的 #YOUR UUID#、#YOUR MB SERIAL#、#YOUR SERIAL NUMBER#，找一个生成器，可以用hacintosh tool。
- - [可选，但是推荐]解锁 CFG-lock 参考https://dortania.github.io/OpenCore-Post-Install/misc/msr-lock.html#turning-off-cfg-lock-manually
-   我的BIOS(BIOS版本 SZ5_V300L15)CFG-lock 地址是0xA0F，将其设为0x00。
-   引导进入 modGRUBShell.efi。
-   setup_var_3 0xA0F 0x00 (用我的CFG-lock变量地址有一定风险,没有在别的型号和bios版本机器上测试过，最好按照上面的教程链接自己做一遍。)
-   引导进入ControlMsrE2.efi, 显示UNLOCKED意味解锁成功。 
-   可以吧config.plist中的"AppleCpuPmCfgLock"和"AppleXcpmCfgLock"设置为false。
+ - [可选，但是推荐]解锁 CFG-lock 参考https://dortania.github.io/OpenCore-Post-Install/misc/msr-lock.html#turning-off-cfg-lock-manually  
+   1. 我的BIOS(BIOS版本 SZ5_V300L15)CFG-lock 地址是0xA0F，将其设为0x00。  
+   2. 引导进入 modGRUBShell.efi。  
+   3. setup_var_3 0xA0F 0x00 (用我的CFG-lock变量地址有一定风险,没有在别的型号和bios版本机器上测试过，最好按照上面的教程链接自己做一遍。)  
+   4. 引导进入ControlMsrE2.efi, 显示UNLOCKED意味解锁成功。   
+   5. 可以吧config.plist中的"AppleCpuPmCfgLock"和"AppleXcpmCfgLock"设置为false。  
  - 下载 Heliport 并安装。 https://github.com/OpenIntelWireless/HeliPort/releases
 
 ### 感谢及出处 (没有特定顺序，并且可能遗漏)
