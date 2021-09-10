@@ -28,7 +28,7 @@ OSX Big sur 11.5.2
  - [Optional but Recommanded] Unlock CFG-lock refer to https://dortania.github.io/OpenCore-Post-Install/misc/msr-lock.html#turning-off-cfg-lock-manually  
    1. In my case (BIOS Version SZ5_V300L15)CFG-lock address is 0xA0F, set it to 0x00.  
    2. Boot into modGRUBShell.efi.  
-   3. setup_var_3 0xA0F 0x00 (use mine with your own risk.I didn't test it in other environment, you'd prefer to do the whole thing in the link above.)  
+   3. <code>setup_var_3 0xA0F 0x00</code> (use mine with your own risk.I didn't test it in other environment, you'd prefer to do the whole thing in the link above.)  
    4. check message in ControlMsrE2.efi, UNLOCKED means SUCCESS.  
    5. you can set "AppleCpuPmCfgLock","AppleXcpmCfgLock" to false in config.plist.  
  - Download Heliport and install. https://github.com/OpenIntelWireless/HeliPort/releases
@@ -79,7 +79,7 @@ OSX Big sur 11.5.2
  - [可选，但是推荐]解锁 CFG-lock 参考https://dortania.github.io/OpenCore-Post-Install/misc/msr-lock.html#turning-off-cfg-lock-manually  
    1. 我的BIOS(BIOS版本 SZ5_V300L15)CFG-lock 地址是0xA0F，将其设为0x00。  
    2. 引导进入 modGRUBShell.efi。  
-   3. setup_var_3 0xA0F 0x00 (用我的CFG-lock变量地址有一定风险,没有在别的型号和bios版本机器上测试过，最好按照上面的教程链接自己做一遍。)  
+   3. <code>setup_var_3 0xA0F 0x00</code> (用我的CFG-lock变量地址有一定风险,没有在别的型号和bios版本机器上测试过，最好按照上面的教程链接自己做一遍。)  
    4. 引导进入ControlMsrE2.efi, 显示UNLOCKED意味解锁成功。   
    5. 可以吧config.plist中的"AppleCpuPmCfgLock"和"AppleXcpmCfgLock"设置为false。  
  - 下载 Heliport 并安装。 https://github.com/OpenIntelWireless/HeliPort/releases
