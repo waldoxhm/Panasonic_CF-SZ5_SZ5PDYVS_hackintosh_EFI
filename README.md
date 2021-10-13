@@ -1,8 +1,13 @@
 ![screenshot1](https://user-images.githubusercontent.com/4980738/132847673-d1db2b64-1376-4986-b399-bfe51c74e6ea.jpg)
 
-# Panasonic_CF-SZ5_SZ5PDYVS_hacintosh_EFI
-opencore 0.7.2 efi partition  
-OSX Big sur 11.5.2
+# Panasonic_CF-SZ5_SZ5PDYVS_hackintosh_EFI
+opencore 0.7.4 efi partition  
+OSX Big sur 11.6
+
+### update2021.10.13 （osx Big sur 11.6 with opencore 0.7.4 ）
+ - fixed trackpad gesture 
+ - upgrade opencore version to 0.7.4
+
 ### System configuration 
  - CPU: Intel Core i5-6300U
  - Graphic: Intel HD520
@@ -23,7 +28,7 @@ OSX Big sur 11.5.2
  - HDMI + Audio
  - Brightness control
  - Keybroad(function hotkey mismatch)
- - Trachpad(act as a PS/2 compatiable mouse, system geature buged, SMBUS loaded ,but VRMI can't recognize it,"SYN0502"in ACPI.)
+ - Trachpad(touchpad and keyboard not waking after sleep due to Voodoops2.kext)
 
 ### Things to do
  - Replace #YOUR UUID# and #YOUR MB SERIAL# and #YOUR SERIAL NUMBER# in config.plist with a generator,such as hacintosh tool.  
@@ -50,9 +55,13 @@ OSX Big sur 11.5.2
 
  
 ——————————————————————————————————————————————————
-# 松下_CF-SZ5_SZ5PDYVS_hacintosh_EFI
-opencore 0.7.2 efi 分区文件
-OSX Big sur 11.5.2
+# 松下_CF-SZ5_SZ5PDYVS_hackintosh_EFI
+opencore 0.7.4 efi 分区文件
+OSX Big sur 11.6
+
+### 更新2021.10.13 （osx Big sur 11.6 with opencore 0.7.4 ）
+ - 修复触摸板手势 
+ - opencore版本升级至0.7.4
 
 ### 系统配置
  - 中央处理器: Intel Core i5-6300U
@@ -74,7 +83,7 @@ OSX Big sur 11.5.2
  - HDMI及声音
  - 背光控制
  - 键盘(功能热键不对应)
- - 触摸板(只能识别成PS/2鼠标,系统手势用不了, SMBUS能正确加载,但是VRMI认不出来触摸板,ACPI中触摸板是"SYN0502".)
+ - 触摸板(触摸板和键盘在睡眠之后无法正常使用，voodoops2.kext的问题)
  
  ### 完善
  - 替换config.plist里的 #YOUR UUID#、#YOUR MB SERIAL#、#YOUR SERIAL NUMBER#，找一个生成器，可以用hacintosh tool。
