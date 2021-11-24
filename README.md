@@ -2,7 +2,13 @@
 
 # Panasonic_CF-SZ5_SZ5PDYVS_hackintosh_EFI
 opencore 0.7.4 efi partition  
-OSX Big sur 11.6
+OSX Monterey 12.0.1
+
+### update2021.11.24 （osx Monterey 12.0.1 with opencore 0.7.4 ）
+ - updated kexts and config.plist to support Monterey. 
+ - fixed Bluetooth 4.X Support,but it may not work after reboot or waking from S3(Sleep).
+ - SDcard Reader only works after waking from S3(Sleep), if boot with a sdcard inserted in will increase boot time. 
+ - fallback to older PS2 Driver (trackpad gesture doesn't work, but works after waking from S3(Sleep)).
 
 ### update2021.10.13 （osx Big sur 11.6 with opencore 0.7.4 ）
  - fixed trackpad gesture 
@@ -57,7 +63,13 @@ OSX Big sur 11.6
 ——————————————————————————————————————————————————
 # 松下_CF-SZ5_SZ5PDYVS_hackintosh_EFI
 opencore 0.7.4 efi 分区文件
-OSX Big sur 11.6
+OSX Monterey 12.0.1
+
+### 更新2021.11.24 （osx Monterey 12.0.1 with opencore 0.7.4 ）
+ - 更新 kexts 和 config.plist 以适配 Monterey。 
+ - 修复蓝牙4.X设备支持，但是蓝牙可能在重启或者睡眠唤醒后无法工作。
+ - 读卡器只有在睡眠恢复后才能正常工作, 如果开机时插着SD卡可能会大大增加引导时间。
+ - 回滚至旧的PS2驱动（手势不可用，但是睡眠唤醒正常）。
 
 ### 更新2021.10.13 （osx Big sur 11.6 with opencore 0.7.4 ）
  - 修复触摸板手势 
